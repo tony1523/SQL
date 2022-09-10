@@ -1,18 +1,22 @@
 # Case Study #1 - Danny's Diner
 <img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/case_study_1_pic.png"  width="450" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
+
 ## Table Of Contents
 * Problem Statement
 * Entity Relationship Diagram
 * Dataset
 * Case Study Questions
 * Solutions
+
 ## Problem Statement 
 Danny wants to use the data to answer a few simple questions about his
 customers, especially about their visiting patterns, how much money they’ve
 spent and also which menu items are their favourite. Having this deeper
 connection with his customers will help him deliver a better and more
 personalised experience for his loyal customers
+
 ## Dataset
+
 ### SALES
 The sales table captures all customer_id level purchases with an corresponding order_date and product_id information for when and what menu items were ordered.
 | customer_id | order_date | product_id |
@@ -32,6 +36,7 @@ The sales table captures all customer_id level purchases with an corresponding o
 | C           | 2021-01-01 | 3          |
 | C           | 2021-01-01 | 3          |
 | C           | 2021-01-07 | 3          |
+
 ### MENU
 The menu table maps the product_id to the actual product_name and price of each menu item.
 | product_id | product_name | price |
@@ -39,12 +44,14 @@ The menu table maps the product_id to the actual product_name and price of each 
 | 1          | sushi        | 10    |
 | 2          | curry        | 15    |
 | 3          | ramen        | 12    |
+
 ### MEMBERS
 The members table captures the join_date when a customer_id joined the beta version of the Danny’s Diner loyalty program.
 | customer_id | join_date  |
 |-------------|------------|
 | A           | 2021-01-07 |
 | B           | 2021-01-09 |
+
 ## Case Study Questions
 1. What is the total amount each customer spent at the restaurant?
 2. How many days has each customer visited the restaurant?
