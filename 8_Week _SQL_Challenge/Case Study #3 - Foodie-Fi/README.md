@@ -152,8 +152,23 @@ ORDER BY 1
 
 ### 4. What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
 ```sql
+DROP TABLE IF EXISTS total_count;
+CREATE TEMP TABLE total_count AS (
+    SELECT COUNT(DISTINCT s.customer_id) AS customer_count
+  	FROM foodie_fi.subscriptions AS s
+);
 
+WITH cte_churn_table AS (
+SELECT COUNT(s.customer_id) AS customer_churn_count
+FROM foodie_fi.subscriptions AS s
+WHERE plan_id=4)
+
+SELECT cte.customer_churn_count, (cte.customer_churn_count::FLOAT/total_count.customer_count::FLOAT)*100 AS percentage_churn_customers
+FROM cte_churn_table AS cte, total_count
 ```
+| customer_churn_count | percentage_churn_customers |
+|----------------------|----------------------------|
+| 307                  | 30.7                       |
 
 ### 5. How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
 ```sql
