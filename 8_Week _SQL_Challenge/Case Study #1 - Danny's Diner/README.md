@@ -2,6 +2,8 @@
 <img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/case_study_1_pic.png"  width="450" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
 
 
+
+
 ## Table Of Contents
 * Problem Statement
 * Entity Relationship Diagram
@@ -10,12 +12,16 @@
 * Solutions
 
 
+
+
 ## Problem Statement 
 Danny wants to use the data to answer a few simple questions about his
 customers, especially about their visiting patterns, how much money they’ve
 spent and also which menu items are their favourite. Having this deeper
 connection with his customers will help him deliver a better and more
 personalised experience for his loyal customers
+
+
 
 
 ## Dataset
@@ -54,6 +60,8 @@ The members table captures the join_date when a customer_id joined the beta vers
 |-------------|------------|
 | A           | 2021-01-07 |
 | B           | 2021-01-09 |
+
+
 
 
 ## Case Study Questions
