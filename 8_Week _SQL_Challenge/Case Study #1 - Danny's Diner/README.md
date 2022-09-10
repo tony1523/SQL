@@ -1,2 +1,1 @@
-
-![alt text](https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/case_study_1_pic.png "Logo Title text 1"){:height="36px" width="36px"}
+<img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/case_study_1_pic.png"  width="600" height="300">
