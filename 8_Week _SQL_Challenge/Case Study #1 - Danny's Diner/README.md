@@ -15,11 +15,7 @@
 
 
 ## Entity Relationship Diagram 
-Danny wants to use the data to answer a few simple questions about his
-customers, especially about their visiting patterns, how much money they’ve
-spent and also which menu items are their favourite. Having this deeper
-connection with his customers will help him deliver a better and more
-personalised experience for his loyal customers
+<img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/entity_case_1.jpg"  width="450" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
 --------------------------------------------------------------------------------
 
 
