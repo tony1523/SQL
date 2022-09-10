@@ -2,7 +2,7 @@
 <img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/case_study_1_pic.png"  width="450" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
 
 
-
+--------------------------------------------------------------------------------
 
 ## Table Of Contents
 * Problem Statement
@@ -11,7 +11,7 @@
 * Case Study Questions
 * Solutions
 
-
+--------------------------------------------------------------------------------
 
 
 ## Problem Statement 
@@ -22,7 +22,7 @@ connection with his customers will help him deliver a better and more
 personalised experience for his loyal customers
 
 
-
+--------------------------------------------------------------------------------
 
 ## Dataset
 
@@ -62,7 +62,7 @@ The members table captures the join_date when a customer_id joined the beta vers
 | B           | 2021-01-09 |
 
 
-
+----------------------------------------------------------------------------
 
 ## Case Study Questions
 1. What is the total amount each customer spent at the restaurant?
@@ -75,6 +75,9 @@ The members table captures the join_date when a customer_id joined the beta vers
 8. What is the total items and amount spent for each member before they became a member?
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+---------------------------------------------------------------------------
+
 ## Solutions
 ### 1. What is the total amount each customer spent at the restaurant?
 ```sql
