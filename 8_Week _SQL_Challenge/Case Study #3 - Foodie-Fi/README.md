@@ -101,17 +101,54 @@ Try to keep it as short as possible - you may also want to run some sort of join
 ## Solutions
 ### 1. How many customers has Foodie-Fi ever had?
 ```sql
-
+SELECT COUNT(DISTINCT customer_id) AS number_of_customers
+FROM foodie_fi.subscriptions;
 ```
+| number_of_customers |
+|---------------------|
+| 1000                |
 
 ### 2. What is the monthly distribution of trial plan start_date values for our dataset - use the start of the month as the group by value?
 ```sql
-
+SELECT TO_CHAR(s.start_date, 'Month')AS month,COUNT(s.customer_id)
+FROM foodie_fi.subscriptions AS s
+WHERE s.plan_id=0
+GROUP BY 1;
 ```
+| month     | count |
+|-----------|-------|
+| April     | 81    |
+| August    | 88    |
+| December  | 84    |
+| February  | 68    |
+| January   | 88    |
+| July      | 89    |
+| June      | 79    |
+| March     | 94    |
+| May       | 88    |
+| November  | 75    |
+| October   | 79    |
+| September | 87    |
+
 ### 3. What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name?
 ```sql
+WITH cte_table AS
+(SELECT customer_id,plan_name,CAST(TO_CHAR(s.start_date, 'yyyy') AS INTEGER)AS year_num
+FROM foodie_fi.subscriptions AS s
+JOIN foodie_fi.plans AS p ON s.plan_id=p.plan_id)
 
+SELECT plan_name,COUNT(customer_id)
+FROM cte_table
+WHERE year_num>=2021
+GROUP BY 1
+ORDER BY 1
 ```
+| plan_name     | count |
+|---------------|-------|
+| basic monthly | 8     |
+| churn         | 71    |
+| pro annual    | 63    |
+| pro monthly   | 60    |
 
 ### 4. What is the customer count and percentage of customers who have churned rounded to 1 decimal place?
 ```sql
