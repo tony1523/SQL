@@ -5,10 +5,10 @@
 --------------------------------------------------------------------------------
 
 ## Table Of Contents
-* [Problem Statement](#ProblemStatement)
-* [Entity Relationship Diagram](#EntityRelationshipDiagram)
+* [Problem Statement](#Problem-Statement)
+* [Entity Relationship Diagram](#Entity-Relationship-Diagram)
 * [Dataset](#Dataset)
-* [Case Study Questions](#CaseStudyQuestions)
+* [Case Study Questions](#Case-Study-Questions)
 * [Solutions](#Solutions)
 
 --------------------------------------------------------------------------------
