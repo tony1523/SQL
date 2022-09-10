@@ -15,7 +15,7 @@
 
 
 ## Entity Relationship Diagram 
-<img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/entity_case_1.jpg"  width="450" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
+<img src="https://github.com/tony1523/SQL/blob/main/8_Week%20_SQL_Challenge/img/entity_case_1.jpg"  width="600" height="450" style="display: block;margin-left: auto;margin-right: auto;width: 50%">
 --------------------------------------------------------------------------------
 
 
