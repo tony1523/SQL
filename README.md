@@ -1,2 +1,2 @@
 # SQL
-https://8weeksqlchallenge.com/
+This repository includes all my SQL projects
