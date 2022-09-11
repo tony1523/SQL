@@ -172,8 +172,24 @@ FROM cte_churn_table AS cte, total_count
 
 ### 5. How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?
 ```sql
-
+DROP TABLE IF EXISTS temp_table_next_plan ;
+CREATE TEMP TABLE temp_table_next_plan AS(
+SELECT *,LEAD(plan_id,1) OVER (
+		PARTITION BY customer_id 
+	) next_plan
+  	FROM foodie_fi.subscriptions AS s);
+    
+WITH cte_table_churn as(
+  SELECT COUNT(customer_id) AS num_churned_after_free_trial
+  FROM temp_table_next_plan
+  WHERE plan_id=0 AND next_plan=4
+)
+SELECT num_churned_after_free_trial,(num_churned_after_free_trial::float/customer_count::float)*100 AS perc_churned_after_free_trial
+FROM cte_table_churn,total_count
 ```
+| num_churned_after_free_trial | perc_churned_after_free_trial |
+|------------------------------|-------------------------------|
+| 92                           | 9.2                           |
 
 ### 6. What is the number and percentage of customer plans after their initial free trial?
 ```sql
